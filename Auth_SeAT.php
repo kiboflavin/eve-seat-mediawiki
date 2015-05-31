@@ -35,7 +35,7 @@ class Auth_SeAT extends AuthPlugin {
 
 	public function _construct($config) {
 
-		$this->api_url = $config['api_url']
+		$this->api_url = $config['api_url'];
 		$this->api_user = $config['api_user'];
 		$this->api_pass = $config['api_pass'];
 	}
