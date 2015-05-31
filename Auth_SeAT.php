@@ -52,8 +52,8 @@ class Auth_SeAT extends AuthPlugin {
 
 		$curl = curl_init($this->api_url);
 		
-		curl_setopt($curl, CURLOPT_USERNAME, $this->api_user);
-		curl_setopt($curl, CURLOPT_PASSWORD, $this->api_pass);
+		curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC); 
+		curl_setopt($curl, CURLOPT_USERPWD, $this->api_user. ':'. $this->api_pass);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLOPT_POST, true);
 		
