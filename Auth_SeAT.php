@@ -78,7 +78,7 @@ class Auth_SeAT extends AuthPlugin {
 			die("JSON decode error from SeAT: {$err}");
 		}
 
-		if ($auth['error'] === true) {
+		if ($auth->error === true) {
 			return false;
 		}
 
