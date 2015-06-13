@@ -67,7 +67,8 @@ class Auth_SeAT extends AuthPlugin {
 		$curl_response = curl_exec($curl);
 		
 		if (curl_errno($curl)) {
-			die("CURL error: ". curl_error($curl));
+			error_log("CURL error: ". curl_error($curl));
+			return false;
 		}
 
 		curl_close($curl);
@@ -75,7 +76,8 @@ class Auth_SeAT extends AuthPlugin {
 		$auth = json_decode($curl_response);
 
 		if ($err = json_last_error()) {
-			die("JSON decode error from SeAT: {$err}");
+			error_log("JSON decode error from SeAT: {$err}");
+			return false;
 		}
 
 		if ($auth->error === true) {
