@@ -81,6 +81,7 @@ class Auth_SeAT extends AuthPlugin {
 		}
 
 		if ($auth->error === true) {
+			error_log("SEAT API ERROR: {$auth->message}");
 			return false;
 		}
 
