@@ -1,4 +1,5 @@
-# MWSeAT
+# eve-seat-mediawiki
+
 MediaWiki plugin for <a href="https://github.com/eve-seat/seat">EVE-SeAT</a> Authentication
 
 Add these lines to the bottom of your LocalSettings.php
